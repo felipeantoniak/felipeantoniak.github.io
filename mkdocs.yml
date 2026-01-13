@@ -18,6 +18,8 @@ theme:
 
 # Extensões (Para deixar o Markdown poderoso)
 markdown_extensions:
+  - admonition
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
