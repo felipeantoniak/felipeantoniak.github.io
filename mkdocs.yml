@@ -2,12 +2,11 @@ site_name: Docs do Felipe
 site_url: https://felipeantoniak.github.io
 site_author: Felipe Antoniak
 
-# Configuração do Tema (Visual Profissional)
+# Configuração do Tema
 theme:
   name: material
   language: pt-BR
   palette: 
-    # Modo Escuro (Slate)
     - scheme: slate
       primary: teal
       accent: lime
@@ -16,7 +15,7 @@ theme:
     - search.suggest
     - search.highlight
 
-# Extensões (Para deixar o Markdown poderoso)
+# Extensões
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -26,12 +25,14 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
-# Navegação (Aqui você organiza suas pastas)
+# Navegação Corrigida
 nav:
   - Home: index.md
   - Estudos:
-    - Hack The Box: htb/index.md
-    - Redes: redes/index.md
-        - Introdução: redes/index.md
-        - Subnetting: redes/subnetting.md
-    - Linux: linux/index.md
+      - Hack The Box: htb/index.md
+      - Redes:
+          - Introdução: redes/index.md      # O arquivo index fica aqui dentro
+          - Subnetting: redes/subnetting.md # E os outros arquivos logo abaixo
+          - Modelo OSI: redes/modelo-osi.md
+          - Topologias: redes/topologias.md
+      - Linux: linux/index.md
