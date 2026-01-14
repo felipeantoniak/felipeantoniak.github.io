@@ -32,6 +32,6 @@ nav:
   - Estudos:
     - Hack The Box: htb/index.md
     - Redes: redes/index.md
-      - Introdução: redes/index.md
-      - Subnetting: redes/subnetting.md
+        - Introdução: redes/index.md
+        - Subnetting: redes/subnetting.md
     - Linux: linux/index.md
