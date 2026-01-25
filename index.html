@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <title>Felipe Antoniak | Backend & Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style-index.css">
+</head>
+
+<body>
+    <section class="hero-container">
+        <div class="business-card">
+            <h1 class="my-name">Felipe Antoniak</h1>
+            <div class="my-role">
+                Backend Engineer <span style="color:#cbd5e1">•</span> Data Integration
+            </div>
+            <div class="divider"></div>
+            <p class="short-pitch">
+                Backend Engineer focado em integridade transacional e arquitetura. Crio pontes entre sistemas legados
+                (ERP) e novas tecnologias para garantir <strong>Performance</strong> e <strong>Segurança de
+                    Dados</strong>.
+            </p>
+            <div class="card-skills">
+                <span class="mini-tag">PHP 8+</span>
+                <span class="mini-tag">SQL Avançado</span>
+                <span class="mini-tag">Linux</span>
+                <span class="mini-tag">MySQL</span>
+                <span class="mini-tag">Oracle DB</span>
+                <span class="mini-tag">JavaScript</span>
+                <span class="mini-tag">RESTful</span>
+                <span class="mini-tag">Pentaho & ETL</span>
+                <span class="mini-tag">Python & AI</span>
+                <span class="mini-tag">Governança TI</span>
+            </div>
+
+            <a href="#portfolio" class="cta-button">Ver Projetos Realizados ↓</a>
+
+            <div class="social-links">
+                <a href="curriculo.html" target="_blank">📄 Ver CV</a>
+                <a href="https://www.linkedin.com/in/felipe-antoniak/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/felipeantoniak" target="_blank">GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="portfolio" class="container">
+        <h2 class="section-title">Portfólio de Engenharia</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="img/image_254558.png" alt="Sistema de Metas" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3>Ecossistema de BI & Metas</h3>
+                    <span class="techs">Data Engineering • Pentaho • PHP</span>
+                    <p>Arquitetura completa de dados: Data Warehouse intermediário para isolar o ERP Oracle, pipeline
+                        ETL automatizado e sistema web de Write-back.</p>
+                    <button class="card-btn" onclick="openModal('modal-bi')">Ver Arquitetura</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="img/Painel-Psiassist.png" alt="PsiAssist SaaS" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3>PsiAssist (SaaS Financeiro)</h3>
+                    <span class="techs">Fintech • Webhooks • Stored Procedures</span>
+                    <p>Plataforma de gestão clínica com integridade financeira "blindada" no banco de dados e automação
+                        de pagamentos via Mercado Pago.</p>
+                    <button class="card-btn" onclick="openModal('modal-psiassist')">Ver Código & DB</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="img/image_25320f.jpg" alt="Portal de Governança" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3>Portal de Governança & RBAC</h3>
+                    <span class="techs">Segurança • Automação • PHP</span>
+                    <p>Centralização de ferramentas críticas (SPED, NCM) em portal seguro com controle de acesso (RBAC),
+                        dando autonomia aos setores.</p>
+                    <button class="card-btn" onclick="openModal('modal-util')">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="img/Pagina-Import.png" alt="Automação Correios" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3>Automação Logística (ETL)</h3>
+                    <span class="techs">Data Parsing • Otimização • PHP</span>
+                    <p>Ferramenta de ingestão de arquivos CSV complexos dos Correios, automatizando a conferência
+                        financeira de fretes.</p>
+                    <button class="card-btn" onclick="openModal('modal-correios')">Ver Solução</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="img/SQL-INTELIGENTE.png" alt="SQL AI" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3>Consultor SQL com IA</h3>
+                    <span class="techs">Python • OpenAI • Segurança de Dados</span>
+                    <p>Middleware seguro que traduz linguagem natural para SQL, consultando um Data Mart isolado para
+                        evitar riscos à produção.</p>
+                    <button class="card-btn" onclick="openModal('modal-ia')">Ver Projeto</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-img-wrapper">
+                    <img src="img/Modelo Lógico Bovinucultura.jpg" alt="Modelagem de Dados" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3>ERP Bovinocultura</h3>
+                    <span class="techs">Modelagem Complexa • Engenharia Reversa</span>
+                    <p>Projeto de arquitetura de banco de dados cobrindo todo o ciclo de vida animal (+30 entidades).
+                        Base teórica sólida.</p>
+                    <button class="card-btn" onclick="openModal('modal-bovino')">Ver Modelagem</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal-bi" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Arquitetura de Dados & Sistema de Metas</h3>
+                <button class="close-btn" onclick="closeModalBtn('modal-bi')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Este projeto nasceu de uma necessidade crítica: a diretoria precisava cruzar as Vendas (do ERP) com
+                    as Metas (definidas pelos gerentes) em tempo real. O desafio? O Power BI não permite entrada de
+                    dados e consultas diretas estavam derrubando a performance do banco de produção.</p>
+
+                <div
+                    style="background-color: #f1f5f9; border-left: 4px solid #64748b; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0; color: #334155; font-size: 0.9rem;">
+                        <strong>📌 Status:</strong> Projeto <em>Entregue e Validado (Tecnicamente)</em>.
+                        <br>
+                        <span style="font-size: 0.85rem; color: #64748b;">
+                            A arquitetura solucionou os problemas de "Lock" no banco Oracle e habilitou o input de
+                            metas. A implementação em todas as 28 lojas aguarda priorização estratégica, servindo hoje
+                            como case de arquitetura híbrida na empresa.
+                        </span>
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🚫 O Gargalo (Oracle Lock)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Conectar o BI direto no ERP Oracle gerava concorrência de I/O. Relatórios pesados rodando no
+                            horário comercial causavam lentidão no checkout (PDV) das lojas, impactando a venda na
+                            ponta.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">💡 A Sacada (Write-back)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Como o Power BI é "apenas leitura", desenvolvi uma aplicação satélite (PHP) para Input de
+                            Metas. O sistema valida os valores e os injeta no Data Warehouse, onde são cruzados
+                            automaticamente com as vendas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h5>Arquitetura de Dados Implementada</h5>
+                    <ul style="margin: 0; padding-left: 20px; color: #334155;">
+                        <li><strong>Data Warehouse Intermediário (MySQL):</strong> Criei uma camada de dados isolada. O
+                            BI bate aqui, nunca na produção. Resultado: Zero impacto na operação das lojas.</li>
+                        <li><strong>Pipeline ETL (Pentaho):</strong> Rotinas automatizadas que extraem dados de vendas,
+                            tratam inconsistências e carregam o DW incrementalmente (D-1).</li>
+                        <li><strong>Integração Híbrida:</strong> O sistema combina dados legados (Oracle On-Premise) com
+                            dados novos de metas (App Web) em um dashboard unificado na nuvem.</li>
+                    </ul>
+                </div>
+
+                <h4>Galeria Técnica (Clique para ampliar)</h4>
+                <div class="modal-gallery">
+                    <div>
+                        <small>Painel de Gestão de Metas (Frontend)</small>
+                        <img src="img/image_254558.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Fluxo de Engenharia de Dados</small>
+                        <img src="img/image_254172.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Importação CSV (Backend)</small>
+                        <img src="img/image_254195.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>CRUD de Metas por Loja</small>
+                        <img src="img/image_254531.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Modelagem ER Normalizada</small>
+                        <img src="img/image_223456.png" onclick="zoomImage(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-psiassist" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>PsiAssist - SaaS Financeiro</h3>
+                <button class="close-btn" onclick="closeModalBtn('modal-psiassist')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>O <strong>PsiAssist</strong> é uma plataforma SaaS onde a integridade dos dados não é negociável.
+                    Diferente de aplicações comuns que delegam toda a lógica para o Backend (PHP), este projeto adota
+                    uma arquitetura <strong>Database-First</strong> para blindar as regras de negócio financeiras.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">💥 O Risco (Inconsistência)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Em sistemas distribuídos, falhas de rede ou no servidor de aplicação podem deixar dados
+                            "órfãos" (ex: um agendamento concluído sem a respectiva fatura gerada), causando prejuízo
+                            financeiro.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🛡️ A Solução (ACID)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Encapsulamento de regras críticas em <strong>Stored Procedures</strong>. Isso garante
+                            transações atômicas: ou o agendamento finaliza E a fatura é criada, ou nenhuma das duas
+                            ações ocorre.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h5>Engenharia de Software Aplicada</h5>
+                    <ul style="margin: 0; padding-left: 20px; color: #334155;">
+                        <li><strong>Integração Orientada a Eventos (Webhooks):</strong> O sistema processa pagamentos do
+                            Mercado Pago de forma assíncrona. O script PHP recebe o payload JSON, valida a assinatura de
+                            segurança e aciona a baixa automática no banco.</li>
+                        <li><strong>Modelagem Relacional (3NF):</strong> Banco de dados normalizado para suportar
+                            múltiplas clínicas (Tenants) com segurança e isolamento de dados.</li>
+                        <li><strong>Full Stack Financeiro:</strong> Fluxo completo implementado, desde a geração do
+                            Pix/Boleto na API até a conciliação bancária automática.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-gallery">
+                    <div>
+                        <small>Modelagem ER Normalizada</small>
+                        <img src="img/Diagrama-Banco-PsiAssist.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Lógica ACID (Stored Procedures)</small>
+                        <img src="img/Procedures.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Webhook Handler (PHP)</small>
+                        <img src="img/CodigoWebhook.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Dashboard & KPIs</small>
+                        <img src="img/Painel-Psiassist.png" onclick="zoomImage(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-util" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Portal de Governança & Utilitários</h3>
+                <button class="close-btn" onclick="closeModalBtn('modal-util')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Antes deste projeto, a manutenção de dados críticos (como SPED e NCM) dependia de scripts
+                    descentralizados ou intervenção direta da TI. Criei este <strong>Portal Corporativo</strong> para
+                    centralizar essas ferramentas, mitigando riscos de segurança e o fenômeno de "Shadow IT".</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🔒 O Problema (Risco)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Ferramentas de manutenção rodando localmente nas máquinas dos usuários dificultam a
+                            auditoria e aumentam o risco de execução acidental de processos críticos por pessoas não
+                            autorizadas.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🛡️ A Solução (Governança)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Desenvolvimento de uma interface Web segura que atua como uma camada de abstração. O usuário
+                            não acessa o banco ou o script direto; ele interage com o Portal, que valida as permissões e
+                            executa a tarefa de forma controlada.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h5>Pilares de Segurança Implementados</h5>
+                    <ul style="margin: 0; padding-left: 20px; color: #334155;">
+                        <li><strong>RBAC (Role-Based Access Control):</strong> Implementação rigorosa de Segregação de
+                            Funções. O setor Fiscal vê apenas ferramentas do SPED; Compras vê apenas NCM. O Admin
+                            gerencia tudo.</li>
+                        <li><strong>Self-Service IT:</strong> Empoderamento dos usuários chaves. Eles ganham autonomia
+                            para resolver problemas rotineiros sem abrir chamados, reduzindo o SLA da TI.</li>
+                        <li><strong>Auditoria & Logs:</strong> Cada ação executada no portal fica registrada (quem fez,
+                            quando fez e o que alterou), garantindo rastreabilidade.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-gallery">
+                    <div>
+                        <small>Painel de Módulos (Admin)</small>
+                        <img src="img/image_25320f.jpg" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Visão Restrita (Setor Compras)</small>
+                        <img src="img/image_252b2c.jpg" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Login Seguro</small>
+                        <img src="img/image_25328f.jpg" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Gestão de Usuários</small>
+                        <img src="img/image_2531d9.jpg" onclick="zoomImage(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-correios" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Automação de Ingestão de Dados (ETL)</h3>
+                <button class="close-btn" onclick="closeModalBtn('modal-correios')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Este projeto transformou uma rotina manual e propensa a falhas em um <strong>Pipeline de Dados
+                        Automatizado</strong>. O objetivo era resolver o gargalo na conferência de faturas logísticas,
+                    permitindo que o setor financeiro auditasse custos de frete em escala.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🌪️ O Desafio (Dados "Sujos")</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Os relatórios CSV dos Correios não são tabulares perfeitos: misturam cabeçalhos, rodapés e
+                            agrupamentos no mesmo arquivo. Tratar isso no Excel era inviável para milhares de linhas.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">⚙️ Engenharia (Custom Parser)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Desenvolvimento de um script PHP robusto que atua como uma "State Machine". Ele lê o arquivo
+                            linha a linha, identifica contextos (cabeçalho vs. dados), sanitiza valores monetários (BRL
+                            para Decimal) e normaliza para o banco.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h5>Impacto Real</h5>
+                    <ul style="margin: 0; padding-left: 20px; color: #334155;">
+                        <li><strong>Ganho de Produtividade:</strong> O processo de conferência caiu de horas (manuais)
+                            para <strong>segundos</strong> (automático).</li>
+                        <li><strong>Auditoria Financeira:</strong> Com os dados estruturados no banco, o sistema cruza
+                            automaticamente o <em>Valor Cobrado</em> vs. <em>Tabela de Contrato</em>, alertando
+                            divergências de frete.</li>
+                        <li><strong>Qualidade de Dados:</strong> Eliminação de erros humanos de digitação na entrada de
+                            dados financeiros.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-gallery">
+                    <div>
+                        <small>Interface de Ingestão (Frontend)</small>
+                        <img src="img/Pagina-Import.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Lógica de Parsing (Backend PHP)</small>
+                        <img src="img/codigo-correios.png" onclick="zoomImage(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-ia" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agente SQL com AI (Segurança em Foco)</h3>
+                <button class="close-btn" onclick="closeModalBtn('modal-ia')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Este projeto foi desenvolvido como uma <strong>Prova de Conceito (PoC)</strong> para explorar o
+                    potencial da IA Generativa na democratização de dados, utilizando um middleware em Python para
+                    traduzir perguntas naturais em SQL.</p>
+
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🚫 O Risco (Desafio)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Conectar uma IA diretamente ao banco de produção (ERP) é perigoso. Queries mal otimizadas
+                            geradas pela IA poderiam travar a operação da empresa, além do risco de "alucinações" nos
+                            dados.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🛡️ Solução "Zero-Risk"</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Implementação de uma arquitetura de camadas. A IA consulta um <strong>Data Mart
+                                isolado</strong> (banco espelho), garantindo que a produção nunca seja impactada, mesmo
+                            se a query for pesada.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h5>Engenharia do Middleware (Python)</h5>
+                    <ul style="margin: 0; padding-left: 20px; color: #334155;">
+                        <li><strong>Sanitização de Queries:</strong> O script Python atua como um "firewall", recebendo
+                            a intenção do usuário, enviando o schema para a OpenAI e validando a query SQL retornada
+                            antes da execução.</li>
+                        <li><strong>Pipeline de Dados:</strong> O Data Mart consultado pela IA é alimentado por um
+                            processo de ETL (Pentaho) que roda a cada 30 minutos, garantindo dados frescos sem
+                            concorrência com o ERP.</li>
+                        <li><strong>Prompt Engineering:</strong> Contexto otimizado para que o modelo entenda as regras
+                            de negócio específicas da empresa (ex: cálculo de margem e impostos).</li>
+                    </ul>
+                </div>
+
+                <div
+                    style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0;">
+                    <h5 style="margin-top: 0; color: #991b1b; font-size: 1.1rem; margin-bottom: 10px;">📉 Análise de
+                        Viabilidade & Conclusão</h5>
+                    <p style="font-size: 0.95rem; color: #7f1d1d; margin-bottom: 10px;">
+                        Após a fase de curadoria de dados, o projeto foi classificado como <strong>não apto para
+                            produção</strong>.
+                    </p>
+                    <ul style="margin: 0; padding-left: 20px; color: #7f1d1d; font-size: 0.9rem;">
+                        <li style="margin-bottom: 5px;"><strong>O Motivo:</strong> A alta complexidade da modelagem e as
+                            regras de negócio específicas (ex: impostos, devoluções parciais) levaram o modelo a gerar
+                            queries sintaticamente corretas, mas semanticamente imprecisas.</li>
+                        <li style="margin-bottom: 5px;"><strong>O Resultado:</strong> Os números apresentados divergiam
+                            dos relatórios oficiais (BI).</li>
+                        <li><strong>Decisão de Engenharia:</strong> Priorizando a integridade da informação, optamos por
+                            manter o BI tradicional (Dashboards) em vez de arriscar decisões baseadas em alucinações da
+                            IA.</li>
+                    </ul>
+                </div>
+
+                <div class="modal-gallery">
+                    <div>
+                        <small>Interface do Chat</small>
+                        <img src="img/SQL-INTELIGENTE.png" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Código Python (Middleware)</small>
+                        <img src="img/CODIGO-SQLINTELIGENTE.png" onclick="zoomImage(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-bovino" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Modelagem de Dados Complexa</h3>
+                <button class="close-btn" onclick="closeModalBtn('modal-bovino')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Este projeto de <strong>Engenharia Reversa</strong> foi desenvolvido para superar limitações de
+                    softwares de prateleira. O objetivo era criar um ERP Agropecuário capaz de gerenciar não apenas o
+                    financeiro, mas o ciclo biológico completo do rebanho.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🎯 O Desafio</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Modelar eventos assíncronos e interdependentes. Exemplo: Um animal não pode ser vendido se
+                            tiver registro sanitário pendente (vacina/carência). O sistema precisava garantir essa
+                            consistência via banco de dados.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 style="color: #1e3a8a; margin-bottom: 8px;">🛠️ Solução (Data Engineering)</h5>
+                        <p style="font-size: 0.9rem; color: #475569;">
+                            Desenvolvimento de um modelo relacional altamente normalizado (3NF) cobrindo mais de
+                            <strong>30 entidades</strong>. Uso rigoroso de chaves estrangeiras e constraints para
+                            impedir "dados órfãos" ou inconsistências biológicas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h5>Destaques da Modelagem</h5>
+                    <ul style="margin: 0; padding-left: 20px; color: #334155;">
+                        <li><strong>Rastreabilidade Total:</strong> Histórico genealógico (árvore familiar) e sanitário
+                            vinculado ao brinco do animal.</li>
+                        <li><strong>Integridade Referencial:</strong> O modelo impede a exclusão acidental de registros
+                            que possuem histórico financeiro ou reprodutivo.</li>
+                        <li><strong>Escalabilidade:</strong> Estrutura preparada para suportar milhares de animais e
+                            movimentações diárias sem perda de performance.</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-section"
+                    style="border-left-color: #f59e0b; background-color: #fffbeb; margin-top: 15px;">
+                    <p style="margin:0; color: #92400e; font-size: 0.85rem;">
+                        <strong>Nota de Compliance:</strong> As imagens abaixo representam recortes parciais (snippets)
+                        do modelo original, preservando a propriedade intelectual e dados sensíveis do projeto.
+                    </p>
+                </div>
+
+                <div class="modal-gallery">
+                    <div>
+                        <small>Modelo Lógico (Integridade & Relacionamentos)</small>
+                        <img src="img/Modelo Lógico Bovinucultura.jpg" onclick="zoomImage(this)">
+                    </div>
+                    <div>
+                        <small>Modelo Conceitual (Regras de Negócio)</small>
+                        <img src="img/Modelo Conceitual Bovinucultura.jpg" onclick="zoomImage(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="zoom-overlay" class="zoom-overlay" onclick="closeZoom()">
+        <img id="zoom-img-target" class="zoom-img">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Felipe Antoniak - Backend & Data Engineering</p>
+        <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 10px;">Construído com foco em performance e
+            usabilidade.</p>
+    </footer>
+
+    <script>
+        // Lógica dos Modais
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden'; // Impede rolagem do fundo
+        }
+
+        function closeModalBtn(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModal(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Lógica do Zoom de Imagem
+        function zoomImage(img) {
+            const overlay = document.getElementById('zoom-overlay');
+            const target = document.getElementById('zoom-img-target');
+            target.src = img.src;
+            overlay.style.display = 'flex';
+        }
+
+        function closeZoom() {
+            document.getElementById('zoom-overlay').style.display = 'none';
+        }
+
+        // Atalho ESC para fechar
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+                closeZoom();
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
