@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style-index.css">
+    <!-- Anti-FOUC: lê tema salvo antes do render -->
+    <script>
+        try {
+            var _t = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', _t);
+        } catch(e) {}
+    </script>
 </head>
 
 <body>
@@ -17,39 +24,78 @@
             <div class="orb orb-1"></div>
             <div class="orb orb-2"></div>
         </div>
+
+        <div class="hero-floats" aria-hidden="true">
+            <div class="float-item fi-1">PHP 8+</div>
+            <div class="float-item fi-2">Oracle DB</div>
+            <div class="float-item fi-3">REST API</div>
+            <div class="float-item fi-4">ETL Pipeline</div>
+            <div class="float-item fi-5">SQL</div>
+        </div>
+
         <div class="hero-content">
             <div class="hero-eyebrow">
                 <span class="status-dot"></span>Disponível para novas oportunidades
             </div>
-            <h1 class="my-name">Felipe Antoniak</h1>
+
+            <h1 class="my-name">
+                <span class="name-first">Felipe</span>
+                <span class="name-last">Antoniak</span>
+            </h1>
+
             <div class="my-role">
                 Backend Engineer <span class="role-dot">·</span> Data Integration
             </div>
+
             <p class="short-pitch">
-                Backend Engineer focado em integridade transacional e arquitetura. Crio pontes entre sistemas legados
-                (ERP) e novas tecnologias para garantir <strong>Performance</strong> e <strong>Segurança de
-                    Dados</strong>.
+                Especialista em <strong>arquitetura de backend</strong> e integração de sistemas.
+                Transformo operações manuais em ecossistemas digitais, de ERPs legados
+                a pipelines de dados automatizados de alta performance.
             </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <strong>5+</strong>
+                    <span>Anos de experiência</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <strong>R$100k</strong>
+                    <span>Economia gerada</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <strong>50h+</strong>
+                    <span>Horas/mês salvas</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <strong>28</strong>
+                    <span>Sistemas integrados</span>
+                </div>
+            </div>
+
             <div class="card-skills">
                 <span class="mini-tag">PHP 8+</span>
                 <span class="mini-tag">SQL Avançado</span>
-                <span class="mini-tag">Linux</span>
-                <span class="mini-tag">MySQL</span>
                 <span class="mini-tag">Oracle DB</span>
-                <span class="mini-tag">JavaScript</span>
-                <span class="mini-tag">RESTful</span>
+                <span class="mini-tag">RESTful APIs</span>
                 <span class="mini-tag">Pentaho & ETL</span>
                 <span class="mini-tag">Python & AI</span>
-                <span class="mini-tag">Governança TI</span>
             </div>
 
-            <a href="#portfolio" class="cta-button">Ver Projetos Realizados ↓</a>
-
-            <div class="social-links">
-                <a href="curriculo.html" target="_blank">📄 Ver CV</a>
-                <a href="https://www.linkedin.com/in/felipe-antoniak/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/felipeantoniak" target="_blank">GitHub</a>
+            <div class="hero-cta-row">
+                <a href="#portfolio" class="cta-button">Ver Projetos ↓</a>
+                <div class="social-links">
+                    <a href="curriculo.html" target="_blank">Ver CV</a>
+                    <a href="https://www.linkedin.com/in/felipe-antoniak/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/felipeantoniak" target="_blank">GitHub</a>
+                </div>
             </div>
+        </div>
+
+        <div class="hero-photo-col">
+            <img src="img/eu.png" alt="Felipe Antoniak" class="hero-photo">
         </div>
         <div class="hero-scroll-hint"><div class="scroll-line"></div></div>
     </section>
@@ -187,11 +233,11 @@
 
                 <div style="background-color: #f0fdf4; border-left: 4px solid #16a34a; padding: 15px; margin-bottom: 25px; border-radius: 0 8px 8px 0;">
                     <p style="margin: 0; color: #15803d; font-size: 0.9rem;">
-                        <strong>✅ Status: Em Produção</strong> — Sistema operando nas 28 filiais da rede · Pittol Calçados.
+                        <strong>✅ Status: Em Produção</strong> · Sistema operando nas 28 filiais da rede · Pittol Calçados.
                     </p>
                 </div>
 
-                <p>Desenvolvimento e arquitetura de um <strong>orquestrador logístico omnichannel de ponta a ponta</strong> para conectar a operação central de e-commerce a 28 filiais. O sistema automatizou todo o ciclo de vida do pedido, substituindo rotinas estritamente manuais por um ecossistema digital integrado, inteligente e de alta performance — atuando desde a triagem até a expedição e o controle financeiro.</p>
+                <p>Desenvolvimento e arquitetura de um <strong>orquestrador logístico omnichannel de ponta a ponta</strong> para conectar a operação central de e-commerce a 28 filiais. O sistema automatizou todo o ciclo de vida do pedido, substituindo rotinas manuais por um ecossistema digital integrado e de alta performance, atuando desde a triagem até a expedição e o controle financeiro.</p>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
                     <div>
@@ -228,7 +274,7 @@
                     <h5>💰 Inteligência Financeira e Rateio</h5>
                     <ul style="margin: 0; padding-left: 20px; color: #334155;">
                         <li><strong>Motor de Processamento de XML (NF-e):</strong> O sistema lê e extrai automaticamente as informações das Notas Fiscais em formato XML, sem intervenção humana.</li>
-                        <li><strong>Rateio Automático Exato:</strong> Distribuição precisa de custos e receitas entre o e-commerce central e as 28 lojas físicas — eliminando as horas de trabalho manual do gerente logístico no fechamento mensal.</li>
+                        <li><strong>Rateio Automático Exato:</strong> Distribuição precisa de custos e receitas entre o e-commerce central e as 28 lojas físicas, eliminando as horas de trabalho manual do gerente logístico no fechamento mensal.</li>
                     </ul>
                 </div>
 
@@ -791,7 +837,38 @@
         }
 
         document.addEventListener('DOMContentLoaded', initSliders);
+
+        /* ===== THEME TOGGLE ===== */
+        (function () {
+            var root = document.documentElement;
+
+            function getTheme() {
+                return root.getAttribute('data-theme') || 'dark';
+            }
+
+            function applyTheme(theme) {
+                root.setAttribute('data-theme', theme);
+                try { localStorage.setItem('theme', theme); } catch(e) {}
+                var btn = document.getElementById('theme-toggle');
+                if (!btn) return;
+                var isDark = theme === 'dark';
+                btn.innerHTML = isDark
+                    ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+                    : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+                btn.title = isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro';
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                applyTheme(getTheme());
+                document.getElementById('theme-toggle').addEventListener('click', function () {
+                    applyTheme(getTheme() === 'dark' ? 'light' : 'dark');
+                });
+            });
+        })();
     </script>
+
+    <!-- Botão flutuante de tema -->
+    <button id="theme-toggle" class="theme-toggle" title="Mudar para modo claro" aria-label="Alternar tema"></button>
 
 </body>
 
