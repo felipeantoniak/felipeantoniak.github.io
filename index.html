@@ -34,10 +34,6 @@
         </div>
 
         <div class="hero-content">
-            <div class="hero-eyebrow">
-                <span class="status-dot"></span>Disponível para novas oportunidades
-            </div>
-
             <h1 class="my-name">
                 <span class="name-first">Felipe</span>
                 <span class="name-last">Antoniak</span>
@@ -82,6 +78,15 @@
                 <span class="mini-tag">RESTful APIs</span>
                 <span class="mini-tag">Pentaho & ETL</span>
                 <span class="mini-tag">Python & AI</span>
+            </div>
+
+            <div class="hero-logos-row">
+                <span class="hero-logos-label">Fundador de</span>
+                <div class="hero-logos-items">
+                    <img src="img/onmni-logo-transparente.png" class="hero-logo" alt="Omni Intelligence">
+                    <img src="img/7nexus_condominio.png" class="hero-logo" alt="7Nexus Condomínio">
+                    <img src="img/7NEXUS PSICOLOGOS.png" class="hero-logo hero-logo-psi" alt="7Nexus Psicólogos">
+                </div>
             </div>
 
             <div class="hero-cta-row">
@@ -743,8 +748,11 @@
         </div>
     </div>
 
-    <div id="zoom-overlay" class="zoom-overlay" onclick="closeZoom()">
+    <div id="zoom-overlay" class="zoom-overlay" onclick="handleZoomClick(event)">
+        <button class="zoom-nav zoom-prev" onclick="zoomNav(-1, event)" aria-label="Anterior">&#8249;</button>
         <img id="zoom-img-target" class="zoom-img">
+        <button class="zoom-nav zoom-next" onclick="zoomNav(1, event)" aria-label="Próxima">&#8250;</button>
+        <button class="zoom-close" onclick="closeZoom()" aria-label="Fechar">×</button>
     </div>
 
     <footer>
@@ -773,11 +781,39 @@
         }
 
         // Lógica do Zoom de Imagem
+        var _zoomGroup = [];
+        var _zoomIdx = 0;
+
         function zoomImage(img) {
-            const overlay = document.getElementById('zoom-overlay');
-            const target = document.getElementById('zoom-img-target');
-            target.src = img.src;
+            // Coleta todas as imagens clícaveis do mesmo bloco (modal-gallery-grid ou modal-gallery-single)
+            var container = img.closest('.modal-gallery-grid, .modal-gallery-single, .modal-body');
+            _zoomGroup = container ? Array.from(container.querySelectorAll('img[onclick]')) : [img];
+            _zoomIdx = _zoomGroup.indexOf(img);
+            _applyZoom();
+        }
+
+        function _applyZoom() {
+            var overlay = document.getElementById('zoom-overlay');
+            var target = document.getElementById('zoom-img-target');
+            target.src = _zoomGroup[_zoomIdx].src;
             overlay.style.display = 'flex';
+            // Mostra/oculta setas conforme número de imagens
+            var showNav = _zoomGroup.length > 1;
+            overlay.querySelector('.zoom-prev').style.display = showNav ? 'flex' : 'none';
+            overlay.querySelector('.zoom-next').style.display = showNav ? 'flex' : 'none';
+        }
+
+        function zoomNav(direction, event) {
+            event.stopPropagation();
+            _zoomIdx = (_zoomIdx + direction + _zoomGroup.length) % _zoomGroup.length;
+            _applyZoom();
+        }
+
+        function handleZoomClick(event) {
+            // Fecha apenas se clicou no fundo, não na imagem ou nos botões
+            if (event.target === document.getElementById('zoom-overlay') || event.target === document.getElementById('zoom-img-target')) {
+                closeZoom();
+            }
         }
 
         function closeZoom() {
@@ -787,9 +823,19 @@
         // Atalho ESC para fechar
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
-                closeZoom();
-                document.body.style.overflow = 'auto';
+                var zoom = document.getElementById('zoom-overlay');
+                if (zoom.style.display === 'flex') {
+                    // Fecha só o zoom, mantém o modal aberto
+                    closeZoom();
+                } else {
+                    document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+                    document.body.style.overflow = 'auto';
+                }
+            }
+            // Setas do teclado para navegar no zoom
+            if (document.getElementById('zoom-overlay').style.display === 'flex') {
+                if (e.key === 'ArrowLeft') zoomNav(-1, { stopPropagation: () => {} });
+                if (e.key === 'ArrowRight') zoomNav(1, { stopPropagation: () => {} });
             }
         });
 
